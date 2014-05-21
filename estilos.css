@@ -1,0 +1,119 @@
+a
+{
+	color: #22BCE0;
+}
+
+body
+{
+	background: #EEEEEE;
+	font-family: Arial;
+	font-size: 16px;
+}
+
+header
+{
+	background: #343B54;
+	color: white;
+	/*Hago que no se vean los elementos que se salen*/
+	overflow: hidden;
+	/*Hago un padding para despegar el logo del margen*/
+	padding: 0.5em;
+	/*Esto unido a la posición absolute del avatar, hará que este suba*/
+	position: relative;
+}
+
+header h1
+{
+	font-size: 18px;
+	/*quito la negrita al h1*/
+	font-weight: normal;
+	/*Quitamos el margen del titulo por arriba con 0.2 y quitamos el de la derecha con 70*/
+	margin: 0.2em 70px 0 0;
+}
+
+header figure
+{
+	/*Pongo los figure a flotar, para poder poner cajas enfrente*/
+	float:left;
+}
+
+header #avatar
+{
+	margin: 0.5em 0.5em 0 0;
+	/*Esto unido a la posición relative del header hará que el logo suba*/
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+header #avatar img
+{
+	/*redondeo la imagen del avatar*/
+	border-radius: 50%;
+	/*reduzco el logo a través de su id*/
+	width: 55px;
+
+}
+
+header #logo img
+{
+	/*reduzco el logo a través de su id*/
+	width: 52px;
+	/* Creo la rayita del logo*/
+	border-right: 1px solid white;
+	/*Separo la raya del logo*/
+	padding-right: 0.5em;
+	/*Separo la raya del texto*/
+	margin-right: 0.5em;
+}
+
+nav
+{
+	background: #80BCA3;
+	padding: 0 0.5em;
+	/*Ponemos posición relativa para poner absoluta al botón publicar*/
+	position: relative;
+}
+
+nav ul #publicar_nav
+{
+	/*Ponemos la posición relativa a nav, así que ponemos esta en absoluta*/
+	position: absolute;
+	top: -0.4em;
+	right: 0;
+}
+
+nav ul #publicar_nav a
+{
+	background: #22BCE0;
+	padding: 0.8em;
+	border-radius: 0.3em;
+	text-decoration: none;
+	font-style: italic;
+	/*Sombra del botón. Primero va el color entre paréntesis y luego el desplazamiento y la difuminación*/
+	text-shadow: rgba(0,0,0,0.5) 2px 2px 5px;
+	/*Sombra de la caja*/
+	box-shadow: rgba(0,0,0,0.5) 2px 2px 10px;
+}
+
+nav ul
+{
+	list-style: none;
+	/* Con el margin quitamos el espacio entre la caja nav y el header*/
+	margin: 0px;
+	padding: 0px;
+}
+
+nav ul li
+{
+	display: inline-block;
+	margin: 0 1em 0 0;
+}
+
+nav ul li a
+{
+	color: white;
+	display: block;
+	padding: 0.5em 0;
+	text-decoration: none;
+}
