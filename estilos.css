@@ -10,6 +10,40 @@ body
 	font-size: 16px;
 }
 
+footer
+{
+	background: #22BCE0;
+	/*Doy un poco de transparencia al texto*/
+	color: rgba(255,255,255,0.7);
+	text-align: center;
+	padding: 1em;
+}
+
+/* First-child indica primera etiqueta en este caso p hija del footer*/
+footer  p:first-child
+{
+	/*rompemos el margen por abajo para que se aproxime a Luismi 2014*/
+	margin-bottom: 0;
+}
+
+footer p:last-child
+{
+	/*Rompemos el margen por arriba para que se pegue a Powered...*/
+	margin-top: 0;
+}
+
+footer p:last-child:after
+{
+	/*Voy a poner la rayita después de luismi, con before y luego con after*/
+	content: " -";
+}
+
+footer p:last-child:before
+{
+	/*Voy a poner la rayita antes de luismi, con after y luego con before*/
+	content: "- ";
+}
+
 header
 {
 	background: #343B54;
@@ -86,12 +120,12 @@ nav ul #publicar_nav
 nav ul #publicar_nav a
 {
 	background: #22BCE0;
-	padding: 0.8em;
+	padding: 0.8em 0.5em;
 	border-radius: 0.3em;
 	text-decoration: none;
 	font-style: italic;
 	/*Sombra del botón. Primero va el color entre paréntesis y luego el desplazamiento y la difuminación*/
-	text-shadow: rgba(0,0,0,0.5) 2px 2px 5px;
+	text-shadow: rgba(0,0,0,0.5) 5px 5px 20px;
 	/*Sombra de la caja*/
 	box-shadow: rgba(0,0,0,0.5) 2px 2px 10px;
 }
@@ -116,4 +150,95 @@ nav ul li a
 	display: block;
 	padding: 0.5em 0;
 	text-decoration: none;
+}
+
+#contenido
+{
+	margin: 1em;
+}
+
+#contenido .item
+{
+	background: white;
+	/*Hacemos la raya azul*/
+	border-bottom: 3px solid #22BCE0;
+	/*Con esta instruccion al pony se le establece el tamaño de imagen minimo pra que podamos colocar las votaciones*/
+	min-height: 128px;
+	/*Para que funcione la clase votacion dentro de item, tengo que poner este en relativo*/
+	position: relative;
+	margin-bottom: 2em;
+}
+
+#contenido .item .autor_item
+{
+	color: #aaa;
+}
+
+#contenido .item .datos_item
+{
+	margin: 1em 1em 0 0;
+	text-align: right;
+}
+
+#contenido .item .datos_item .fecha_item
+{
+	color: #aaa;
+}
+
+#contenido .item .datos_item .tag_item
+{
+	background: #F4502A;
+	color: white;
+	float: left;
+	display: inline-block;
+	padding: 0.2em;
+	border-radius: 0.5em;
+	text-decoration: none;
+}
+
+#contenido .item .imagen_item
+{
+	/*Poner la imagen a la derecha para que el texto se ponga al lado*/
+	float: left;
+	margin: 0 1em 0 0 ;
+}
+
+#contenido .item .imagen_item img
+{
+	width: 96px;
+}
+
+#contenido .item .titulo_item
+{
+	/*Ponemos la letra del h1 a nuestro gusto*/
+	font-size: 1.2em;
+	font-style: italic;
+	padding: 1em 1em 0 0;
+}
+
+#contenido .item .titulo_item a
+{
+	color: #444;
+	text-decoration: none;
+}
+
+#contenido .item .votacion
+{
+	/*Al poner este absoluto, tengo que poner relativo item, porque si no se va arriba del todo*/
+	position: absolute;
+	left: 0;
+	/*Como al tener esa posición se va para arriba, con top 100% baja*/
+	top: 100%;
+	background: white;
+	width: 90%;
+	left: 5%;
+	margin-top: 3px;
+	padding:0.2em 0.5em;
+	border-radius: 0 0 0.5em 0.5em;
+}
+
+#contenido .item .votacion .comentarios_item,
+#contenido .item .votacion .guardar_item
+{
+	float: right;
 }
