@@ -1,3 +1,15 @@
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('fuentes/OpenSans-Regular-webfont.eot');
+    src: url('fuentes/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fuentes/OpenSans-Regular-webfont.woff') format('woff'),
+         url('fuentes/OpenSans-Regular-webfont.ttf') format('truetype'),
+         url('fuentes/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 a
 {
 	color: #22BCE0;
@@ -6,7 +18,7 @@ a
 body
 {
 	background: #EEEEEE;
-	font-family: Arial;
+	font-family: 'Open Sans', sans-serif;;
 	font-size: 16px;
 }
 
