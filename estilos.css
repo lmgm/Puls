@@ -40,13 +40,18 @@
 }
 .icon-estrella:before {
 	content: "\e601";
+	color: #FFBE2C;
+	margin-right: 0.4em;
+	position: relative;
+	top: 0.1em;
 }
 .icon-f-abajo:before {
 	content: "\e602";
-
+	color: red;
 }
 .icon-f-arriba:before {
 	content: "\e603";
+	color: green;
 }
 
 a
@@ -293,4 +298,16 @@ nav ul li a
 #contenido .item .votacion .guardar_item
 {
 	float: right;
+}
+#contenido .item .votacion a
+{
+		text-decoration: none;
+}
+
+@media screen and (min-width: 800px)
+{
+	body
+	{
+		 background-color: red;
+	}
 }
